@@ -59,6 +59,7 @@ public class StockMovementRepository {
         }
     }
 
+    // f - GET /ingredients/{id}/stockMovements
     public List<StockMovement> findByIngredientIdAndDateRange(Integer ingredientId, Instant from, Instant to) {
         String sql = """
                 SELECT id, quantity, unit, type, creation_datetime
@@ -88,7 +89,7 @@ public class StockMovementRepository {
 
         return movements;
     }
-
+    // f - GET /ingredients/{id}/stockMovements
     public StockMovement createStockMovement(int ingredientId, double quantity, UnitEnum unit, MovementTypeEnum type) {
         String sql = """
                 INSERT INTO stock_movement (id_ingredient, quantity, unit, type, creation_datetime)

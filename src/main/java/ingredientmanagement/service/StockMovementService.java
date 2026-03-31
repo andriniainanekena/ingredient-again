@@ -24,10 +24,12 @@ public class StockMovementService {
         return stockMovementRepository.getStockValueAt(ingredientId, at, unit);
     }
 
+    // f - GET /ingredients/{id}/stockMovements
     public List<StockMovement> getStockMovementsByIngredientAndDateRange(Integer ingredientId, Instant from, Instant to) {
         return stockMovementRepository.findByIngredientIdAndDateRange(ingredientId, from, to);
     }
 
+    // f - GET /ingredients/{id}/stockMovements
     public List<StockMovement> createStockMovements(Integer ingredientId, List<StockMovementCreateRequest> requests) {
         List<StockMovement> created = new ArrayList<>();
         for (StockMovementCreateRequest req : requests) {
