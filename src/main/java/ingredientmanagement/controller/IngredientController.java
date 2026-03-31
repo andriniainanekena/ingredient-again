@@ -74,7 +74,7 @@ public class IngredientController {
         StockValue stockValue = ingredientService.getStockAt(id, atInstant, unitEnum);
         return ResponseEntity.ok(stockValue);
     }
-
+    // f - GET /ingredients/{id}/stockMovements
     @GetMapping("/ingredients/{id}/stockMovements")
     public ResponseEntity<?> getStockMovements(
             @PathVariable Integer id,
