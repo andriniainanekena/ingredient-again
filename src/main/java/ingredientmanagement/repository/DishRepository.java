@@ -1,7 +1,7 @@
 package ingredientmanagement.repository;
 
 import org.springframework.stereotype.Repository;
-import school.hei.ingredientspringboot.entity.*;
+import ingredientmanagement.entity.*;
 
 import javax.sql.DataSource;
 import java.sql.*;
